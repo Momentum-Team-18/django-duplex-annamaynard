@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for deck in decks %}
+    <h2 class="deck">
+        <img class="image" src="{{ deck.image.url }}" alt="Deck Image">
+        Topic: {{ deck.topic }}
+        <p>Number of Cards {{ deck.number_of_cards }}</p>
+    </h2>
+{% endfor %}
+{% endblock %}
